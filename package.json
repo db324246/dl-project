@@ -1,0 +1,19 @@
+{
+  "name": "dl-project",
+  "version": "1.0.0",
+  "description": "'微研产品版项目模板脚手架'",
+  "main": "lib/dl-files.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "node"
+  ],
+  "bin": "bin/cli.js",
+  "author": "daixiaobin",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5"
+  }
+}

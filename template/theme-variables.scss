@@ -1,0 +1,23 @@
+@import '~@/theme-var/blue-light-theme/theme-map.scss';
+// 主题色
+$primaryColor: map-get($theme, primaryColor);
+// 极淡主题色，用作 hover 背景色
+$tingePrimaryBgColor: mix(#fff, $primaryColor, 97%);
+// 安全色
+$infoColor: map-get($theme, infoColor);
+// 成功色
+$successColor: map-get($theme, successColor);
+// 警告色
+$warnColor: map-get($theme, warnColor);
+// 危险色
+$dangerColor: map-get($theme, dangerColor);
+
+// 头部亮色
+$headLightColor: map-get($theme, headLightColor);
+// 头部深色
+$headDarkColor: map-get($theme, headDarkColor);
+
+// 主要的淡色背景色
+$tingeBgColor: map-get($theme, tingeBgColor); 
+// 线框颜色
+$borderColor: map-get($theme, borderColor);

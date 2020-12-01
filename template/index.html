@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"> -->
+    <title><%= projectName %></title>
+    <script>
+	    // js检测浏览器是否小于ie10
+	    (function(window) {
+	    	if (!!window.ActiveXObject || 'ActiveXObject' in window) {
+	    		console.log('是老IE浏览器！');
+	    		if ('FormData' in window && typeof FormData === 'function') {
+	    			console.log('IE10+浏览器');
+	    		} else {
+	    			console.log('IE9-浏览器');
+	    			window.location.href = '/commonView/ie.html';
+	    		}
+	    	} else {
+	    		console.log('非IE浏览器，新IE-edge不算做IE浏览器');
+	    	}
+		})(window);
+	  </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
