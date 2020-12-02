@@ -7,8 +7,7 @@ let projectName = process.argv[3]
 if (!projectName) {
   return handler.quesForName()
     .then(answer => {
-      projectName = answer
-      handler[command](projectName)
+      handler[command](answer)
     })
 }
 
