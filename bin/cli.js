@@ -1,14 +1,27 @@
 #!/usr/bin/env node
-const handler = require('../lib/handler')
+const { program } = require("commander")
+const { version } = require('../package.json')
 
-const command = process.argv[2]
-let projectName = process.argv[3]
-
-if (!projectName) {
-  return handler.quesForName()
-    .then(answer => {
-      handler[command](answer)
-    })
+const commandObj = {
+  'create <projectName>': {
+    alias: 'crt',
+    desc: 'create new project'
+  },
+  'remove <projectName>': {
+    alias: 'rm',
+    desc: 'remove project'
+  }
 }
 
-handler[command](projectName)
+Reflect.ownKeys(commandObj).forEach(command => {
+  program
+    .command(command)
+    .alias(commandObj[command].alias)
+    .description(commandObj[command].desc)
+    .action((projectName) => {
+      require('..')(projectName, command)
+    });
+})
+
+program.version(`v ${version}`)
+  .parse(process.argv);
