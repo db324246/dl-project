@@ -13,6 +13,8 @@ const commandObj = {
   }
 }
 
+program.option('--config <configPath>', 'path of config file', './dl-pro.conf.js' )
+
 Reflect.ownKeys(commandObj).forEach(command => {
   program
     .command(command)
