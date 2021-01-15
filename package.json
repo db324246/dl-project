@@ -1,6 +1,6 @@
 {
   "name": "dl-project",
-  "version": "1.1.8",
+  "version": "1.2.0",
   "description": "'微研产品版项目模板脚手架'",
   "main": "lib/handler.js",
   "scripts": {
